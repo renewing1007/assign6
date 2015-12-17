@@ -23,12 +23,19 @@ class Enemy{
 
 	boolean isCollideWithFighter()
 	{
-		return false;
+     if(isHit(this.x,this.y, this.enemyImg.width, this.enemyImg.height, fighter.x, fighter.y ,fighter.fighterImg.width ,fighter.fighterImg.height )){
+		return true;
+     }else{
+       return false;
+     }
 	}
 
 	boolean isOutOfBorder()
-	{
-		return false;
+	{if(this.x>width){
+   return true;
+}else{	return false;
+}
+
 	}
 
 
